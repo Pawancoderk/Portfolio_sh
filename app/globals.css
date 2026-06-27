@@ -1,0 +1,190 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: #09090b;
+  --foreground: #f4f4f5;
+  --card-bg: rgba(18, 18, 20, 0.7);
+  --card-border: rgba(39, 39, 42, 0.7);
+  --accent: #10b981;
+  --accent-hover: #34d399;
+  --accent-muted: rgba(16, 185, 129, 0.1);
+  --dashed-line: rgba(63, 63, 70, 0.35);
+  --dot-color: rgba(161, 161, 170, 0.07);
+  --glow-color: rgba(99, 102, 241, 0.12);
+  --grid-size: 24px;
+}
+
+html.light {
+  --background: #fafafa;
+  --foreground: #18181b;
+  --card-bg: rgba(255, 255, 255, 0.85);
+  --card-border: rgba(228, 228, 231, 0.9);
+  --accent: #7c3aed;
+  --accent-hover: #6d28d9;
+  --accent-muted: rgba(124, 58, 237, 0.08);
+  --dashed-line: rgba(212, 212, 216, 0.6);
+  --dot-color: rgba(24, 24, 27, 0.05);
+  --glow-color: rgba(124, 58, 237, 0.08);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card-bg);
+  --color-card-border: var(--card-border);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-muted: var(--accent-muted);
+  --color-dashed: var(--dashed-line);
+}
+
+/* Custom Scrollbar and Layout Defaults */
+html, body {
+  background-color: var(--background);
+  color: var(--foreground);
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+::selection {
+  background-color: var(--accent-muted);
+  color: var(--foreground);
+}
+
+/* Draggable Canvas Dot Grid Background */
+.bg-dot-grid {
+  background-size: var(--grid-size) var(--grid-size);
+  background-image: radial-gradient(
+    circle,
+    var(--dot-color) 1.5px,
+    transparent 1.5px
+  );
+  background-position: center;
+}
+
+/* Hide Scrollbar helper */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Blink Animation for diagnostic LEDs */
+@keyframes diagnostic-blink {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 0 8px var(--accent);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(0.85);
+    box-shadow: 0 0 2px var(--accent);
+  }
+}
+
+.animate-diagnostic-blink {
+  animation: diagnostic-blink 2s infinite ease-in-out;
+}
+
+/* Hover Spotlight Mask Reveal */
+.spotlight-glow {
+  background: radial-gradient(
+    800px circle at var(--mouse-x, 0px) var(--mouse-y, 0px),
+    var(--glow-color),
+    transparent 40%
+  );
+}
+
+/* Custom Dither pattern */
+.bg-dither {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.15) 1px, transparent 0),
+    radial-gradient(rgba(0, 0, 0, 0.15) 1px, transparent 0);
+  background-size: 8px 8px;
+  background-position: 0 0, 4px 4px;
+}
+
+html.dark .bg-dither {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 0),
+    radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 0);
+}
+
+/* Redesign & Wave Animation Utilities */
+@keyframes wave-slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-wave-1 {
+  animation: wave-slide 14s linear infinite;
+}
+
+.animate-wave-2 {
+  animation: wave-slide 8s linear infinite;
+}
+
+/* Radar Sweep */
+@keyframes radar-sweep {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-radar {
+  animation: radar-sweep 6s linear infinite;
+}
+
+/* Retro CRT Scanlines Overlay */
+.crt-scanlines {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.15) 50%
+  );
+  background-size: 100% 4px;
+}
+
+/* Grid neon pulse */
+@keyframes neon-pulse {
+  0%, 100% {
+    border-color: rgba(16, 185, 129, 0.2);
+    box-shadow: 0 0 10px rgba(16, 185, 129, 0.05);
+  }
+  50% {
+    border-color: rgba(16, 185, 129, 0.4);
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.15);
+  }
+}
+
+.animate-neon-pulse {
+  animation: neon-pulse 3s infinite ease-in-out;
+}
+
+/* Laser Scanning Beam */
+@keyframes scan-beam {
+  0% {
+    top: -5%;
+  }
+  50% {
+    top: 105%;
+  }
+  100% {
+    top: -5%;
+  }
+}
+
+.animate-scan-beam {
+  animation: scan-beam 3.5s ease-in-out infinite;
+}
+
+

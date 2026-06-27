@@ -1,0 +1,2 @@
+- [x] Rewrite `components/UI/FuturisticLoader.tsx` to implement the Matrix canvas rain and scanning avatar
+- [x] Verify that the application builds and the new preloader functions perfectly
