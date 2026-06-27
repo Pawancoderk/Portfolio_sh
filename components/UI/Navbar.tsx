@@ -133,7 +133,7 @@ export function Navbar({ onScrollToSection }: NavbarProps) {
                   className={`relative px-3.5 py-1.5 text-xs font-medium tracking-wide transition-colors duration-200 cursor-pointer rounded-full ${
                     isActive
                       ? "text-foreground font-semibold"
-                      : "text-zinc-400 hover:text-foreground"
+                      : "text-zinc-500 hover:text-zinc-950 dark:text-zinc-400 dark:hover:text-zinc-100"
                   }`}
                 >
                   {/* Sliding Hover Background */}
@@ -203,7 +203,7 @@ export function Navbar({ onScrollToSection }: NavbarProps) {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-x-0 top-[72px] mx-4 z-35 md:hidden bg-zinc-950/80 dark:bg-zinc-950/80 border border-zinc-850/80 rounded-2xl p-5 backdrop-blur-lg shadow-xl"
+            className="fixed inset-x-0 top-[72px] mx-4 z-35 md:hidden bg-card/95 border border-zinc-850/80 rounded-2xl p-5 backdrop-blur-lg shadow-xl"
           >
             <div className="flex flex-col gap-3">
               {navLinks.map((link) => {
@@ -214,8 +214,8 @@ export function Navbar({ onScrollToSection }: NavbarProps) {
                     onClick={() => handleLinkClick(link.id)}
                     className={`w-full py-2.5 px-4 text-left rounded-lg text-sm font-medium transition-all ${
                       isActive
-                        ? "bg-zinc-900 text-foreground font-semibold border-l-2 border-accent pl-3"
-                        : "text-zinc-400 hover:text-foreground hover:bg-zinc-900/50"
+                        ? "bg-zinc-100 dark:bg-zinc-900 text-foreground font-semibold border-l-2 border-accent pl-3"
+                        : "text-zinc-500 hover:text-zinc-950 dark:text-zinc-400 dark:hover:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-900/50"
                     }`}
                   >
                     {link.label}
@@ -231,7 +231,7 @@ export function Navbar({ onScrollToSection }: NavbarProps) {
                   setIsMobileMenuOpen(false);
                   setTimeout(handleOpenSearch, 200);
                 }}
-                className="w-full flex items-center justify-between py-2.5 px-4 rounded-lg text-sm font-medium text-zinc-400 hover:text-foreground hover:bg-zinc-900/50 text-left"
+                className="w-full flex items-center justify-between py-2.5 px-4 rounded-lg text-sm font-medium text-zinc-500 hover:text-zinc-950 dark:text-zinc-400 dark:hover:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-900/50 text-left"
               >
                 <div className="flex items-center gap-2.5">
                   <Search className="size-4 text-zinc-500" />

@@ -1080,6 +1080,7 @@ export function Contact() {
               {/* Scrolling events feed */}
               <div
                 ref={logsContainerRef}
+                data-lenis-prevent
                 className="h-20 overflow-y-auto space-y-1 scrollbar-none pr-2 font-mono text-emerald-500/75 select-text"
               >
                 {logs.map((log, index) => (

@@ -308,11 +308,11 @@ export function CommandMenu({
                   onChange={(e) => setSearch(e.target.value)}
                   className="flex-1 bg-transparent border-none outline-none text-zinc-200 placeholder-zinc-600 font-mono focus:ring-0 w-full"
                 />
-                <span className="text-[9px] text-zinc-650 uppercase">⌘K</span>
+                <span className="text-[9px] text-zinc-650 uppercase">⌘ K</span>
               </div>
 
               {/* Suggestions List */}
-              <div className="max-h-[300px] overflow-y-auto p-2 scrollbar-none space-y-1">
+              <div data-lenis-prevent className="max-h-[300px] overflow-y-auto p-2 scrollbar-none space-y-1">
                 {filtered.length === 0 ? (
                   <div className="py-8 text-center text-zinc-600">
                     No matching commands found.
@@ -337,11 +337,10 @@ export function CommandMenu({
                           <button
                             key={item.id}
                             onClick={item.action}
-                            className={`w-full p-2.5 rounded-lg flex items-center justify-between text-left cursor-pointer transition-colors ${
-                              isSelected
+                            className={`w-full p-2.5 rounded-lg flex items-center justify-between text-left cursor-pointer transition-colors ${isSelected
                                 ? "bg-accent/10 text-accent font-semibold border-l-2 border-accent"
                                 : "text-zinc-400 hover:bg-zinc-900/40 hover:text-zinc-200"
-                            }`}
+                              }`}
                           >
                             <div className="flex items-center gap-2.5">
                               {item.icon}

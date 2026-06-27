@@ -226,6 +226,7 @@ export function Diagnostics({ dragX = 0, dragY = 0 }: DiagnosticsProps) {
         {/* Streaming entries container */}
         <div 
           ref={logsContainerRef}
+          data-lenis-prevent
           className="flex-1 overflow-y-auto max-h-[50px] space-y-1.5 scrollbar-none"
         >
           <AnimatePresence initial={false}>

@@ -14,6 +14,15 @@
   --dot-color: rgba(161, 161, 170, 0.07);
   --glow-color: rgba(99, 102, 241, 0.12);
   --grid-size: 24px;
+
+  /* Custom responsive zinc variables (Dark mode) */
+  --zinc-350: #b0b0b7;
+  --zinc-450: #8c8c96;
+  --zinc-550: #62626a;
+  --zinc-650: #48484f;
+  --zinc-750: #303036;
+  --zinc-805: #212124;
+  --zinc-850: #1b1b1f;
 }
 
 html.light {
@@ -27,6 +36,15 @@ html.light {
   --dashed-line: rgba(212, 212, 216, 0.6);
   --dot-color: rgba(24, 24, 27, 0.05);
   --glow-color: rgba(124, 58, 237, 0.08);
+
+  /* Custom responsive zinc variables (Light mode) */
+  --zinc-350: #3f3f46;
+  --zinc-450: #27272a;
+  --zinc-550: #18181b;
+  --zinc-650: #09090b;
+  --zinc-750: #a1a1aa;
+  --zinc-805: #d4d4d8;
+  --zinc-850: #e4e4e7;
 }
 
 @theme inline {
@@ -38,6 +56,14 @@ html.light {
   --color-accent-hover: var(--accent-hover);
   --color-accent-muted: var(--accent-muted);
   --color-dashed: var(--dashed-line);
+
+  --color-zinc-350: var(--zinc-350);
+  --color-zinc-450: var(--zinc-450);
+  --color-zinc-550: var(--zinc-550);
+  --color-zinc-650: var(--zinc-650);
+  --color-zinc-750: var(--zinc-750);
+  --color-zinc-805: var(--zinc-805);
+  --color-zinc-850: var(--zinc-850);
 }
 
 /* Custom Scrollbar and Layout Defaults */

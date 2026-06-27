@@ -195,13 +195,13 @@ export function DevStudio() {
             </span>
           );
         } else {
-          highlightedLine = <span className="text-blue-300">{line}</span>;
+          highlightedLine = <span className="text-blue-600 dark:text-blue-300">{line}</span>;
         }
       }
 
       return (
-        <div key={i} className="flex leading-5 hover:bg-zinc-900/50 px-4 transition-colors">
-          <span className="w-6 shrink-0 text-zinc-600 text-right select-none pr-3 text-[10px] tabular-nums font-mono border-r border-dashed border-zinc-900 mr-3">
+        <div key={i} className="flex leading-5 hover:bg-zinc-200 dark:hover:bg-zinc-900/50 px-4 transition-colors">
+          <span className="w-6 shrink-0 text-zinc-500 dark:text-zinc-650 text-right select-none pr-3 text-[10px] tabular-nums font-mono border-r border-dashed border-zinc-300 dark:border-zinc-850 mr-3">
             {i + 1}
           </span>
           <span className="font-mono text-xs whitespace-pre select-text tracking-wide">{highlightedLine}</span>
@@ -211,10 +211,10 @@ export function DevStudio() {
   };
 
   return (
-    <div className="w-full max-w-[480px] bg-zinc-950/80 backdrop-blur-xl border border-dashed border-zinc-800/80 rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.3)] overflow-hidden flex flex-col font-mono relative select-none">
+    <div className="w-full max-w-[480px] bg-white/95 dark:bg-zinc-950/80 backdrop-blur-xl border border-dashed border-zinc-850 rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] dark:shadow-[0_20px_50px_rgba(0,0,0,0.3)] overflow-hidden flex flex-col font-mono relative select-none">
       
       {/* 1. Window Header HUD bar */}
-      <div className="flex items-center justify-between px-4 py-2.5 bg-zinc-900/40 border-b border-dashed border-zinc-850/80">
+      <div className="flex items-center justify-between px-4 py-2.5 bg-zinc-100/60 dark:bg-zinc-900/40 border-b border-dashed border-zinc-850/80">
         <div className="flex items-center gap-1.5">
           <span className="size-2.5 rounded-full bg-red-500/80" />
           <span className="size-2.5 rounded-full bg-yellow-500/80" />
@@ -229,7 +229,7 @@ export function DevStudio() {
 
       <div className="flex flex-1 h-[260px] md:h-[280px]">
         {/* 2. Left Explorer Sidebar */}
-        <div className="w-[140px] shrink-0 border-r border-dashed border-zinc-850/80 bg-zinc-950/40 p-2 flex flex-col justify-between">
+        <div className="w-[140px] shrink-0 border-r border-dashed border-zinc-850/80 bg-zinc-50/40 dark:bg-zinc-950/40 p-2 flex flex-col justify-between">
           <div className="space-y-1.5">
             <span className="text-[9px] text-zinc-600 font-bold uppercase tracking-wider block px-1.5 mb-2 select-none">
               EXPLORER
@@ -243,7 +243,7 @@ export function DevStudio() {
                   className={`w-full text-left px-2 py-1.5 rounded text-[10.5px] flex items-center gap-1.5 transition-all cursor-pointer ${
                     isActive
                       ? "bg-zinc-850 text-foreground font-semibold border-l-2 border-accent"
-                      : "text-zinc-400 hover:text-foreground hover:bg-zinc-900/40"
+                      : "text-zinc-500 hover:text-foreground dark:text-zinc-400 hover:bg-zinc-200/50 dark:hover:bg-zinc-900/40"
                   }`}
                 >
                   <FileCode className={`size-3.5 ${file.iconColor}`} />
@@ -285,13 +285,13 @@ export function DevStudio() {
         </div>
 
         {/* 3. Code Editor Window */}
-        <div className="flex-1 py-3 overflow-y-auto bg-zinc-950/20 select-text scrollbar-thin">
+        <div data-lenis-prevent className="flex-1 py-3 overflow-y-auto bg-zinc-50/10 dark:bg-zinc-950/20 select-text scrollbar-thin">
           {renderCodeLines()}
         </div>
       </div>
 
       {/* 4. Bottom Terminal Console Drawer */}
-      <div className="border-t border-dashed border-zinc-850/80 bg-zinc-950 p-3 h-[130px] flex flex-col justify-between select-none">
+      <div className="border-t border-dashed border-zinc-850/80 bg-zinc-100/40 dark:bg-zinc-950 p-3 h-[130px] flex flex-col justify-between select-none">
         <div className="flex items-center justify-between border-b border-dashed border-zinc-900 pb-1 mb-1.5">
           <span className="text-[9px] text-zinc-500 font-bold uppercase tracking-wider flex items-center gap-1">
             <Terminal className="size-3" /> TERMINAL OUTPUT
@@ -304,7 +304,7 @@ export function DevStudio() {
         </div>
         
         {/* Terminal Log Console */}
-        <div className="flex-1 overflow-y-auto font-mono text-[10px] leading-relaxed text-zinc-400 space-y-1 scrollbar-none pr-1">
+        <div data-lenis-prevent className="flex-1 overflow-y-auto font-mono text-[10px] leading-relaxed text-zinc-400 space-y-1 scrollbar-none pr-1">
           {terminalLogs.map((log, index) => {
             const isCmd = log.startsWith("$");
             const isError = log.includes("Error:") || log.includes("RETRY");

@@ -68,7 +68,7 @@ export function ExperienceLogs() {
       </div>
 
       {/* Accordion Stream */}
-      <div className="space-y-3 overflow-y-auto flex-1 scrollbar-none pr-1">
+      <div data-lenis-prevent className="space-y-3 overflow-y-auto flex-1 scrollbar-none pr-1">
         {EXPERIENCES.map((item) => {
           const isOpen = expandedId === item.id;
 

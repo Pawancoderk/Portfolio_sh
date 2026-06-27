@@ -86,7 +86,7 @@ export function AIPlayground() {
       </div>
 
       {/* Terminal Screen Console */}
-      <div className="flex-1 overflow-y-auto p-4 space-y-4 scrollbar-none h-[220px] md:h-[260px]">
+      <div data-lenis-prevent className="flex-1 overflow-y-auto p-4 space-y-4 scrollbar-none h-[220px] md:h-[260px]">
         {messages.map((msg, index) => (
           <div
             key={index}

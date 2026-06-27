@@ -124,8 +124,8 @@ export function HeroSection({ onViewProjectsClick }: HeroSectionProps) {
             </h1>
             
             {/* Styled tags chips layout */}
-            <div className="flex flex-wrap items-center gap-2.5 pt-2 text-[10px] sm:text-xs font-mono text-zinc-400 font-medium">
-              <span className="px-3 py-1 rounded-full border border-dashed border-zinc-200/10 dark:border-zinc-800/80 bg-zinc-100/50 dark:bg-zinc-900/40 backdrop-blur-sm shadow-sm">
+            <div className="flex flex-wrap items-center gap-2.5 pt-2 text-[10px] sm:text-xs font-mono text-zinc-550 font-medium">
+              <span className="px-3 py-1 rounded-full border border-dashed border-zinc-300 dark:border-zinc-800/80 bg-zinc-100/50 dark:bg-zinc-900/40 backdrop-blur-sm shadow-sm">
                 Full Stack Developer
               </span>
               <span className="text-zinc-450/40 select-none">•</span>
@@ -134,7 +134,7 @@ export function HeroSection({ onViewProjectsClick }: HeroSectionProps) {
                 AI Builder
               </span>
               <span className="text-zinc-450/40 select-none">•</span>
-              <span className="px-3 py-1 rounded-full border border-dashed border-zinc-200/10 dark:border-zinc-800/80 bg-zinc-100/50 dark:bg-zinc-900/40 backdrop-blur-sm shadow-sm">
+              <span className="px-3 py-1 rounded-full border border-dashed border-zinc-300 dark:border-zinc-800/80 bg-zinc-100/50 dark:bg-zinc-900/40 backdrop-blur-sm shadow-sm">
                 B.Tech CS Student
               </span>
             </div>
@@ -148,12 +148,12 @@ export function HeroSection({ onViewProjectsClick }: HeroSectionProps) {
           {/* Executive Summary Grid (10-Second Recruiter scan) */}
           <div className="grid grid-cols-3 gap-3 pt-3 w-full max-w-lg font-mono text-[10px] leading-tight select-none">
             {/* Card 1: Superpower */}
-            <div className="relative group flex flex-col justify-between p-4 rounded-xl border border-zinc-200/15 dark:border-zinc-800/60 bg-zinc-100/20 dark:bg-zinc-950/40 backdrop-blur-md shadow-sm hover:shadow-[0_8px_20px_color-mix(in_srgb,var(--accent)_10%,transparent)] hover:border-accent/40 hover:-translate-y-1 transition-all duration-300 overflow-hidden">
+            <div className="relative group flex flex-col justify-between p-4 rounded-xl border border-zinc-300/80 dark:border-zinc-800/60 bg-zinc-100/40 dark:bg-zinc-950/40 backdrop-blur-md shadow-sm hover:shadow-[0_8px_20px_color-mix(in_srgb,var(--accent)_10%,transparent)] hover:border-accent/40 hover:-translate-y-1 transition-all duration-300 overflow-hidden">
               <div className="absolute inset-0 bg-dot-grid opacity-20 dark:opacity-10 pointer-events-none" />
               <div className="absolute -inset-px bg-gradient-to-br from-accent/0 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-xl" />
-              <div className="flex justify-between items-center text-zinc-400 dark:text-zinc-500 text-[8px] font-extrabold uppercase tracking-widest z-10">
+              <div className="flex justify-between items-center text-zinc-550 text-[8px] font-extrabold uppercase tracking-widest z-10">
                 <span>SUPERPOWER</span>
-                <div className="p-1 rounded-md bg-zinc-200/30 dark:bg-zinc-900/60 border border-zinc-200/10 dark:border-zinc-800 text-accent group-hover:scale-110 transition-transform duration-300">
+                <div className="p-1 rounded-md bg-zinc-200/50 dark:bg-zinc-900/60 border border-zinc-300 dark:border-zinc-800 text-accent group-hover:scale-110 transition-transform duration-300">
                   <Cpu className="size-3.5 text-accent" />
                 </div>
               </div>
@@ -168,12 +168,12 @@ export function HeroSection({ onViewProjectsClick }: HeroSectionProps) {
             </div>
 
             {/* Card 2: Production */}
-            <div className="relative group flex flex-col justify-between p-4 rounded-xl border border-zinc-200/15 dark:border-zinc-800/60 bg-zinc-100/20 dark:bg-zinc-950/40 backdrop-blur-md shadow-sm hover:shadow-[0_8px_20px_color-mix(in_srgb,var(--accent)_10%,transparent)] hover:border-accent/40 hover:-translate-y-1 transition-all duration-300 overflow-hidden">
+            <div className="relative group flex flex-col justify-between p-4 rounded-xl border border-zinc-300/80 dark:border-zinc-800/60 bg-zinc-100/40 dark:bg-zinc-950/40 backdrop-blur-md shadow-sm hover:shadow-[0_8px_20px_color-mix(in_srgb,var(--accent)_10%,transparent)] hover:border-accent/40 hover:-translate-y-1 transition-all duration-300 overflow-hidden">
               <div className="absolute inset-0 bg-dot-grid opacity-20 dark:opacity-10 pointer-events-none" />
               <div className="absolute -inset-px bg-gradient-to-br from-accent/0 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-xl" />
-              <div className="flex justify-between items-center text-zinc-400 dark:text-zinc-500 text-[8px] font-extrabold uppercase tracking-widest z-10">
+              <div className="flex justify-between items-center text-zinc-550 text-[8px] font-extrabold uppercase tracking-widest z-10">
                 <span>PRODUCTION</span>
-                <div className="p-1 rounded-md bg-zinc-200/30 dark:bg-zinc-900/60 border border-zinc-200/10 dark:border-zinc-800 text-accent group-hover:scale-110 transition-transform duration-300">
+                <div className="p-1 rounded-md bg-zinc-200/50 dark:bg-zinc-900/60 border border-zinc-300 dark:border-zinc-800 text-accent group-hover:scale-110 transition-transform duration-300">
                   <Layers className="size-3.5 text-accent" />
                 </div>
               </div>
@@ -188,12 +188,12 @@ export function HeroSection({ onViewProjectsClick }: HeroSectionProps) {
             </div>
 
             {/* Card 3: Metric */}
-            <div className="relative group flex flex-col justify-between p-4 rounded-xl border border-zinc-200/15 dark:border-zinc-800/60 bg-zinc-100/20 dark:bg-zinc-950/40 backdrop-blur-md shadow-sm hover:shadow-[0_8px_20px_color-mix(in_srgb,var(--accent)_10%,transparent)] hover:border-accent/40 hover:-translate-y-1 transition-all duration-300 overflow-hidden">
+            <div className="relative group flex flex-col justify-between p-4 rounded-xl border border-zinc-300/80 dark:border-zinc-800/60 bg-zinc-100/40 dark:bg-zinc-950/40 backdrop-blur-md shadow-sm hover:shadow-[0_8px_20px_color-mix(in_srgb,var(--accent)_10%,transparent)] hover:border-accent/40 hover:-translate-y-1 transition-all duration-300 overflow-hidden">
               <div className="absolute inset-0 bg-dot-grid opacity-20 dark:opacity-10 pointer-events-none" />
               <div className="absolute -inset-px bg-gradient-to-br from-accent/0 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-xl" />
-              <div className="flex justify-between items-center text-zinc-400 dark:text-zinc-500 text-[8px] font-extrabold uppercase tracking-widest z-10">
+              <div className="flex justify-between items-center text-zinc-550 text-[8px] font-extrabold uppercase tracking-widest z-10">
                 <span>METRIC</span>
-                <div className="p-1 rounded-md bg-zinc-200/30 dark:bg-zinc-900/60 border border-zinc-200/10 dark:border-zinc-800 text-accent group-hover:scale-110 transition-transform duration-300">
+                <div className="p-1 rounded-md bg-zinc-200/50 dark:bg-zinc-900/60 border border-zinc-300 dark:border-zinc-800 text-accent group-hover:scale-110 transition-transform duration-300">
                   <Gauge className="size-3.5 text-accent" />
                 </div>
               </div>
@@ -223,7 +223,7 @@ export function HeroSection({ onViewProjectsClick }: HeroSectionProps) {
             <MagneticButton
               href="/resume.pdf"
               download="Pawan_Kumar_Resume.pdf"
-              className="h-11 px-6 border border-zinc-200/20 dark:border-zinc-800 bg-zinc-100/10 dark:bg-zinc-950/20 hover:border-accent/40 text-zinc-650 dark:text-zinc-400 hover:text-accent font-semibold rounded-full transition-all duration-300 shadow-sm hover:shadow-[0_4px_16px_color-mix(in_srgb,var(--accent)_12%,transparent)] hover:scale-[1.02] flex items-center cursor-pointer"
+              className="h-11 px-6 border border-zinc-300 dark:border-zinc-800 bg-zinc-100/40 dark:bg-zinc-950/20 hover:border-accent/40 text-zinc-650 dark:text-zinc-400 hover:text-accent font-semibold rounded-full transition-all duration-300 shadow-sm hover:shadow-[0_4px_16px_color-mix(in_srgb,var(--accent)_12%,transparent)] hover:scale-[1.02] flex items-center cursor-pointer"
             >
               <div className="flex items-center gap-1.5 text-xs font-mono uppercase tracking-wider">
                 <FileText className="size-3.5" />
@@ -238,7 +238,7 @@ export function HeroSection({ onViewProjectsClick }: HeroSectionProps) {
               href="https://github.com/pawankumar"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center size-10 rounded-full border border-zinc-200/20 dark:border-zinc-800 bg-zinc-100/10 dark:bg-zinc-950/45 text-zinc-450 hover:text-accent hover:border-accent/40 hover:shadow-[0_0_12px_color-mix(in_srgb,var(--accent)_25%,transparent)] hover:scale-105 transition-all duration-300 cursor-pointer"
+              className="flex items-center justify-center size-10 rounded-full border border-zinc-300 dark:border-zinc-800 bg-zinc-100/40 dark:bg-zinc-950/45 text-zinc-650 dark:text-zinc-450 hover:text-accent hover:border-accent/40 hover:shadow-[0_0_12px_color-mix(in_srgb,var(--accent)_25%,transparent)] hover:scale-105 transition-all duration-300 cursor-pointer"
               title="GitHub Profile"
             >
               <GithubIcon className="size-4.5" />
@@ -247,14 +247,14 @@ export function HeroSection({ onViewProjectsClick }: HeroSectionProps) {
               href="https://linkedin.com/in/pawankumar"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center size-10 rounded-full border border-zinc-200/20 dark:border-zinc-800 bg-zinc-100/10 dark:bg-zinc-950/45 text-zinc-450 hover:text-accent hover:border-accent/40 hover:shadow-[0_0_12px_color-mix(in_srgb,var(--accent)_25%,transparent)] hover:scale-105 transition-all duration-300 cursor-pointer"
+              className="flex items-center justify-center size-10 rounded-full border border-zinc-300 dark:border-zinc-800 bg-zinc-100/40 dark:bg-zinc-950/45 text-zinc-650 dark:text-zinc-455 hover:text-accent hover:border-accent/40 hover:shadow-[0_0_12px_color-mix(in_srgb,var(--accent)_25%,transparent)] hover:scale-105 transition-all duration-300 cursor-pointer"
               title="LinkedIn Profile"
             >
               <LinkedinIcon className="size-4.5" />
             </a>
             <a
               href="mailto:pawan@example.com"
-              className="flex items-center justify-center size-10 rounded-full border border-zinc-200/20 dark:border-zinc-800 bg-zinc-100/10 dark:bg-zinc-950/45 text-zinc-450 hover:text-accent hover:border-accent/40 hover:shadow-[0_0_12px_color-mix(in_srgb,var(--accent)_25%,transparent)] hover:scale-105 transition-all duration-300 cursor-pointer"
+              className="flex items-center justify-center size-10 rounded-full border border-zinc-300 dark:border-zinc-800 bg-zinc-100/40 dark:bg-zinc-950/45 text-zinc-650 dark:text-zinc-455 hover:text-accent hover:border-accent/40 hover:shadow-[0_0_12px_color-mix(in_srgb,var(--accent)_25%,transparent)] hover:scale-105 transition-all duration-300 cursor-pointer"
               title="Send Email"
             >
               <Mail className="size-4.5" />
